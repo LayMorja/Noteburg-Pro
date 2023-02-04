@@ -1,14 +1,75 @@
 //====================================================================================================
 .header {
-   // position: absolute;
-   // z-index: 30;
-   // width: 100%;
-   // top: 0;
-   // left: 0;
+	&--home {
+		position: absolute;
+		z-index: 30;
+		width: 100%;
+		top: 0;
+		left: 0;
+		.header__lower {
+			background: rgba(255, 255, 255, 0.1);
+		}
+	}
+	&__upper {
+		background-color: var(--clr-white);
+	}
 
-   &__container {
+	&__upper .container {
+		@extend %fl-r-ct;
+		padding: rem(13) rem(15);
+	}
 
-   }
+	&__logo {
+		&:not(:last-child) {
+			margin-right: auto;
+		}
+	}
+
+	&__workours {
+		&:not(:last-child) {
+			margin-right: rem(40);
+			@media (max-width: $mobileMedium) {
+				margin-right: rem(20);
+			}
+		}
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__contacts {
+		&:not(:last-child) {
+			margin-right: rem(40);
+			@media (max-width: $mobileMedium) {
+				margin-right: rem(20);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+
+	&__callback {
+	}
+
+	&__lower {
+		padding: rem(12) 0;
+		background: var(--gr);
+		@media (max-width: $tablet) {
+			padding: 0;
+		}
+	}
+
+	&__lower .container {
+		@extend %fl-r-ct;
+	}
+
+	&__menu {
+	}
+
+	&__search {
+		margin-left: auto;
+	}
 }
 
 //====================================================================================================

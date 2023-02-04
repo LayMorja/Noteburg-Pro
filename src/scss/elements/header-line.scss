@@ -1,0 +1,115 @@
+.workours {
+	display: flex;
+	align-items: center;
+	max-width: rem(201);
+	padding: rem(4) rem(40);
+	border-radius: rem(58);
+	background: var(--gr);
+	text-align: center;
+	font-weight: 700;
+	line-height: 1.25;
+	color: var(--clr-white);
+}
+
+//====================================================================================================
+
+.contacts-list {
+	@extend %fl-r-ct;
+}
+
+.contacts-list li:not(:last-child) {
+	margin-right: rem(15);
+}
+
+.contacts-list li {
+	@extend %fl-a-ct;
+	border-radius: 50%;
+	background: var(--gr);
+}
+
+.contacts-list a {
+	border-radius: 50%;
+	background: var(--gr);
+}
+
+.contacts-list a svg {
+	display: block;
+	width: rem(22);
+	height: rem(22);
+	object-fit: contain;
+}
+
+//====================================================================================================
+
+.callback-phone {
+	@extend %fl-c-en;
+}
+.callback-phone a {
+	@extend %f-20-700;
+	color: var(--clr-accent);
+	@media (max-width: $mobileNormal) {
+		font-size: rem(16);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: rem(14);
+	}
+}
+.callback-phone button {
+	@extend %f-14-400;
+	&:last-child {
+		margin-top: rem(3);
+	}
+	@media (max-width: $mobileNormal) {
+		font-size: rem(12);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: rem(10);
+	}
+}
+
+//====================================================================================================
+
+.search-block {
+	display: flex;
+	input:not([type='submit']) {
+		height: rem(35);
+		padding: rem(5) rem(15);
+		border-radius: 33px;
+		border: 1px solid #ffffff;
+		background-color: transparent;
+		color: var(--clr-white);
+		transition: box-shadow 0.32s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: inset 2px 2px 25px rgba(255, 255, 255, 0.1);
+			}
+		}
+		&:focus {
+			outline: none;
+			box-shadow: inset 2px 2px 15px rgba(255, 255, 255, 0.1);
+		}
+		@media (max-width: em(1139.98)) {
+			width: rem(155);
+		}
+	}
+	.cta {
+		cursor: pointer;
+		&:last-child {
+			margin-left: rem(10);
+		}
+		padding: rem(8.5) rem(16);
+		transition: transform 0.15s ease;
+		&:active {
+			transform: translateY(rem(1));
+		}
+	}
+	@media (max-width: $tablet) {
+		display: none;
+	}
+	&--mobile {
+		display: none;
+		@media (max-width: $tablet) {
+			display: flex;
+		}
+	}
+}

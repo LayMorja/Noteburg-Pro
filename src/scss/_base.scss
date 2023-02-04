@@ -1,5 +1,5 @@
 // Общий файл элементов форм
-// @import "base/forms/forms";
+@import 'base/forms/forms';
 
 // Стили попапов
 // @import "base/popup";
@@ -54,10 +54,10 @@
 		&:before {
 			counter-increment: item;
 			content: counter(item);
-         font-weight: 900;
-         font-size: rem(28);
-         line-height: 1.25;
-         color: var(--clr-yellow);
+			font-weight: 900;
+			font-size: rem(28);
+			line-height: 1.25;
+			color: var(--clr-yellow);
 		}
 	}
 }
@@ -126,46 +126,61 @@
 }
 // Флекс всё по центру
 %fl-a-ct {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 // Флекс всё старту
 %fl-a-st {
-   display: flex;
-   align-items: flex-start;
-   justify-content: flex-start;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
 }
 // Срока по центу
 %fl-r-ct {
-   display: flex;
-   align-items: center;
+	display: flex;
+	align-items: center;
 }
 // Строка по низу
 %fl-r-bt {
-   display: flex;
-   align-items: flex-end;
+	display: flex;
+	align-items: flex-end;
 }
 // Строка по верху
 %fl-r-st {
-   display: flex;
-   align-items: flex-start;
+	display: flex;
+	align-items: flex-start;
 }
 // Флекс колонка по началу
 %fl-c-st {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+%fl-c-en {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 // Фоновое изображение
 %bg-cov {
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 // То же самое, но contain
 %bg-con {
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+%f-14-400 {
+	font-weight: 400;
+	font-size: rem(14);
+	line-height: math.div(16, 14);
+}
+%f-20-700 {
+	font-weight: 700;
+	font-size: rem(20);
+	line-height: math.div(23, 20);
 }

@@ -1,6 +1,11 @@
 // Подключение общих CSS-переменных
 :root {
-   --clr-white: #fff;
-   --clr-black: #000;
-   --clr-accent: #d33838;
+	--clr-white: #fff;
+	--clr-black: #000;
+	--clr-light-grey: #404040;
+	--clr-dark-grey: #242424;
+	--clr-secondary: #c42120;
+	--clr-accent: #643dd1;
+
+	--gr: linear-gradient(86.41deg, #643fd2 7.27%, #8ca8e3 93.73%);
 }

@@ -1,124 +1,173 @@
 .menu {
-   &__body {
-      > ul {
-      }
-      > ul > li {
-      }
-      > ul > li:hover ul {
-         // transform: translateY(0);
-         // opacity: 1;
-         // visibility: visible;
-         // pointer-events: all;
-      }
-      > ul > li > a {
-      }
-      > ul > li ul {
-      }
-      > ul > li ul li {
-      }
-      > ul > li ul li a {
-      }
-   }
+	&__body {
+		> ul {
+			@extend %fl-r-ct;
+		}
+		> ul > li {
+			&:not(:last-child) {
+				margin-right: rem(40);
+				@media (max-width: em(1139.98)) {
+					margin-right: rem(30);
+				}
+			}
+		}
+		> ul > li > a {
+			font-weight: 700;
+			line-height: 1.15;
+			text-transform: uppercase;
+			color: var(--clr-white);
+			transition: opacity 0.32s ease-in-out;
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+			&:focus {
+				outline: none;
+				opacity: 0.6;
+			}
+		}
+		@media (max-width: $tablet) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: var(--gr);
+			padding: rem(60) rem(15);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-100%);
+			transition: all 0.32s ease-in-out;
+			> ul {
+				flex-direction: column;
+			}
+			> ul > li:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: em(25, 20);
+			}
+			> ul > li > a {
+				font-size: rem(20);
+			}
+			.menu-open & {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__search {
+		margin-top: rem(20);
+	}
 }
 
 //====================================================================================================
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(22);
+		flex: 0 0 rem(22);
 		height: rem(16);
+		margin-left: rem(25);
 		cursor: pointer;
 		z-index: 31;
 		span,
 		&::before,
 		&::after {
-			content: "";
+			content: '';
 			transition: all 0.35s ease 0s;
 			right: 0;
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: var(--clr-white);
-         border-radius: 20px;
+			background-color: var(--clr-black);
+			border-radius: 20px;
 		}
 		&::before {
 			top: 0;
-         animation: menu07-bar01 .55s forwards;
+			animation: menu07-bar01 0.55s forwards;
 		}
 		span {
-         top: calc(50% - rem(1));
-         transition: all .25s .25s;
-         opacity: 1;
+			top: calc(50% - rem(1));
+			transition: all 0.25s 0.25s;
+			opacity: 1;
 		}
-      &::after {
-         bottom: 0;
-         animation: menu07-bar03 .55s forwards;
-      }
+		&::after {
+			bottom: 0;
+			animation: menu07-bar03 0.55s forwards;
+		}
 		.menu-open & {
-         &::before {
-            animation: active-menu07-bar01 .55s forwards;
-         }
+			&::before {
+				animation: active-menu07-bar01 0.55s forwards;
+			}
 			span {
 				opacity: 0;
 			}
 			&::after {
-            animation: active-menu07-bar03 .55s forwards;
+				animation: active-menu07-bar03 0.55s forwards;
 			}
 		}
+	}
+	@media (max-width: $mobileMini) {
+		margin-left: rem(15);
 	}
 }
 
 @keyframes menu07-bar01 {
-   0% {
-      transform: translateY(7px) rotate(45deg);
-   }
+	0% {
+		transform: translateY(7px) rotate(45deg);
+	}
 
-   50% {
-      transform: translateY(7px) rotate(0);
-   }
+	50% {
+		transform: translateY(7px) rotate(0);
+	}
 
-   100% {
-      transform: translateY(0) rotate(0);
-   }
+	100% {
+		transform: translateY(0) rotate(0);
+	}
 }
 @keyframes menu07-bar03 {
-   0% {
-      transform: translateY(-7px) rotate(-45deg);
-   }
+	0% {
+		transform: translateY(-7px) rotate(-45deg);
+	}
 
-   50% {
-      transform: translateY(-7px) rotate(0);
-   }
+	50% {
+		transform: translateY(-7px) rotate(0);
+	}
 
-   100% {
-      transform: translateY(0) rotate(0);
-   }
+	100% {
+		transform: translateY(0) rotate(0);
+	}
 }
 @keyframes active-menu07-bar01 {
-   0% {
-      transform: translateY(0) rotate(0);
-   }
+	0% {
+		transform: translateY(0) rotate(0);
+	}
 
-   50% {
-      transform: translateY(7px) rotate(0);
-   }
+	50% {
+		transform: translateY(7px) rotate(0);
+	}
 
-   100% {
-      transform: translateY(7px) rotate(45deg);
-   }
+	100% {
+		transform: translateY(7px) rotate(45deg);
+	}
 }
 @keyframes active-menu07-bar03 {
-   0% {
-      transform: translateY(0) rotate(0);
-   }
+	0% {
+		transform: translateY(0) rotate(0);
+	}
 
-   50% {
-      transform: translateY(-7px) rotate(0);
-   }
+	50% {
+		transform: translateY(-7px) rotate(0);
+	}
 
-   100% {
-      transform: translateY(-7px) rotate(-45deg);
-   }
+	100% {
+		transform: translateY(-7px) rotate(-45deg);
+	}
 }

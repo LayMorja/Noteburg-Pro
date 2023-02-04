@@ -4,5 +4,5 @@ package-lock.json
 *.tgz
 *.rar
 *.zip
-config/version.json
-config/setting/ftp.js
+/config/version.json
+/config/settings/ftp.js

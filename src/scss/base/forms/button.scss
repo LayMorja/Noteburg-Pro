@@ -1,9 +1,17 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
-.button {
+.cta {
 	display: inline-flex;
-	padding: 0px 0px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: rem(16) rem(24);
+	border-radius: rem(35);
+	background-color: var(--clr-secondary);
+	color: var(--clr-white);
+	font-weight: 500;
+	line-height: math.div(18, 16);
 	@media (any-hover: hover) {
 		&:hover {
 		}
