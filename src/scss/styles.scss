@@ -51,7 +51,6 @@ $responsiveType: 1;
 @import 'base/null';
 
 body {
-	background-color: #2e2e2e;
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
@@ -116,13 +115,21 @@ body {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
 @import 'base';
 
+// Подключение отступов крупных блоков
+@import 'page';
+
 // Подключение стилей небольших элементов
 @import 'elements/logo';
 @import 'elements/menu';
 @import 'elements/header-line';
+@import 'elements/hero-form';
+@import 'elements/card-about';
+@import 'elements/form-callback';
 
 // Подключение крупных блоков
 @import 'blocks/hero';
+@import 'blocks/about';
+@import 'blocks/guarantee';
 
 // Подключение стилей общих элементов проекта
 @import 'common';

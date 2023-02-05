@@ -1,0 +1,58 @@
+.card-about {
+	@extend %fl-c-ct;
+	text-align: center;
+	&__image {
+		width: 100%;
+		@extend %ibg;
+		padding-bottom: percent(268, 413);
+		border-radius: rem(10);
+		overflow: hidden;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+		img {
+			transition: transform 0.32s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	&__title {
+		@extend %f-36-700;
+		&:not(:last-child) {
+			margin-bottom: em(11, 36);
+		}
+	}
+
+	&__descr {
+		max-width: rem(300);
+		@extend %f-22-500;
+		line-height: 1;
+		&:not(:last-child) {
+			margin-bottom: em(30, 22);
+		}
+	}
+
+	&__link {
+		margin-top: auto;
+		align-self: center;
+		font-size: rem(20);
+		span {
+			padding: rem(12) rem(58);
+		}
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+			span {
+				padding: rem(9) rem(58);
+			}
+		}
+	}
+}

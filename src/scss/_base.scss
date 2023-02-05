@@ -22,6 +22,10 @@
 // Стили для липкого блока
 // @import "base/sticky";
 
+._accent {
+	color: var(--clr-accent);
+}
+
 // Адаптивные изображения
 %ibg {
 	position: relative;
@@ -157,6 +161,12 @@
 	flex-direction: column;
 	align-items: flex-start;
 }
+// Флекс колонка по центру
+%fl-c-ct {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 %fl-c-en {
 	display: flex;
 	flex-direction: column;
@@ -183,4 +193,86 @@
 	font-weight: 700;
 	font-size: rem(20);
 	line-height: math.div(23, 20);
+}
+%f-22-500 {
+	font-weight: 500;
+	font-size: rem(22);
+	@media (max-width: $tablet) {
+		font-size: rem(20);
+	}
+	@media (max-width: $mobileMedium) {
+		font-size: rem(18);
+	}
+	@media (max-width: $mobileMini) {
+		font-size: rem(16);
+	}
+}
+%f-24-700 {
+	font-weight: 700;
+	font-size: rem(24);
+}
+%f-36-700 {
+	font-weight: 700;
+	font-size: rem(36);
+	line-height: math.div(41, 36);
+	@media (max-width: $pc) {
+		font-size: rem(32);
+	}
+	@media (max-width: $tablet) {
+		font-size: rem(28);
+	}
+	@media (max-width: $mobile) {
+		font-size: rem(26);
+	}
+	@media (max-width: $mobileMedium) {
+		font-size: rem(24);
+	}
+	@media (max-width: $mobileMini) {
+		font-size: rem(20);
+	}
+}
+%f-38-700 {
+	font-weight: 700;
+	font-size: rem(38);
+	@media (max-width: $pc) {
+		font-size: rem(36);
+	}
+	@media (max-width: $tablet) {
+		font-size: rem(32);
+	}
+	@media (max-width: $mobile) {
+		font-size: rem(28);
+	}
+	@media (max-width: $mobileMedium) {
+		font-size: rem(26);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: rem(24);
+	}
+	@media (max-width: $mobileMini) {
+		font-size: rem(20);
+	}
+}
+%f-48-700 {
+	font-weight: 700;
+	font-size: rem(48);
+	line-height: math.div(50, 48);
+	@media (max-width: $pc) {
+		font-size: rem(42);
+	}
+	@media (max-width: $tablet) {
+		font-size: rem(36);
+	}
+	@media (max-width: $mobile) {
+		font-size: rem(32);
+	}
+	@media (max-width: $mobileMedium) {
+		font-size: rem(28);
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: rem(26);
+	}
+	@media (max-width: $mobileMini) {
+		font-size: rem(22);
+	}
 }

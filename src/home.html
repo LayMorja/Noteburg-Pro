@@ -13,7 +13,194 @@
 		<div class="wrapper" data-sticky>
 			@@include("./html/_header.html",{ "class":"header--home" })
 			<main class="page">
-				<section class="page__hero hero"></section>
+				<section
+					class="page__hero hero"
+					style="background-image: url('@temp/hero/background.jpg')">
+					<div class="hero__container container">
+						<h1>Лучшая цена в Санкт-Петербурге за компьютерную технику!</h1>
+						<form action="" class="hero__form form-hero">
+							<span class="form-hero__label"
+								>Ответьте на 3 вопроса и получите расчёт стоимости за
+								<span class="_accent">1 минуту</span>
+							</span>
+							<div class="form-hero__body">
+								<span class="form-hero__title">Вопрос 1 из 3</span>
+								<div class="form-hero__elements">
+									<div class="form-hero__column form-hero__column--01">
+										<h2 class="form-hero__title">Выберите категорию:</h2>
+										<div class="form-hero__checkboxes">
+											<div class="form-hero__checkbox">
+												<input
+													type="checkbox"
+													name="Устройство"
+													id="ck01"
+													class="form-hero__checkbox-input"
+													value="Ноутбуки" />
+												<label for="ck01" class="form-hero__checkbox-label"
+													>Ноутбуки</label
+												>
+											</div>
+											<div class="form-hero__checkbox">
+												<input
+													type="checkbox"
+													name="Устройство"
+													id="ck02"
+													class="form-hero__checkbox-input"
+													value="Продукция Apple" />
+												<label for="ck02" class="form-hero__checkbox-label"
+													>Продукция Apple</label
+												>
+											</div>
+										</div>
+										<div class="form-hero__select">
+											<label for="sel01" class="form-hero__select-label"
+												>Модель ноутбука:</label
+											>
+											<select
+												name="Модель ноутбука"
+												id="sel01"
+												class="form-hero__select-input">
+												<option value="1" selected>- МАРКА -</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-hero__column form-hero__column--02">
+										<div class="form-hero__select">
+											<label for="sel03" class="form-hero__select-label"
+												>Модель ноутбука:</label
+											>
+											<select
+												name="Модель ноутбука"
+												id="sel03"
+												class="form-hero__select-input">
+												<option value="1" selected>- МАРКА -</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+										<div class="form-hero__select">
+											<label for="sel03" class="form-hero__select-label"
+												>Состояние:</label
+											>
+											<select
+												name="Состояние"
+												id="sel03"
+												class="form-hero__select-input">
+												<option value="1" selected>- состояние -</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-hero__column form-hero__column--03">
+										<h2 class="form-hero__title form-hero__title--hidden" style="visibility: hidden">
+											Выберите категорию:
+										</h2>
+										<div class="form-hero__checkboxes">
+											<div class="form-hero__checkbox">
+												<input
+													type="checkbox"
+													name="Устройство"
+													id="ck03"
+													class="form-hero__checkbox-input"
+													value="зарядка" />
+												<label for="ck03" class="form-hero__checkbox-label"
+													>зарядка</label
+												>
+											</div>
+											<div class="form-hero__checkbox">
+												<input
+													type="checkbox"
+													name="Устройство"
+													id="ck04"
+													class="form-hero__checkbox-input"
+													value="коробка" />
+												<label for="ck04" class="form-hero__checkbox-label"
+													>коробка</label
+												>
+											</div>
+											<div class="form-hero__checkbox">
+												<input
+													type="checkbox"
+													name="Устройство"
+													id="ck05"
+													class="form-hero__checkbox-input"
+													value="чек" />
+												<label for="ck05" class="form-hero__checkbox-label">чек</label>
+											</div>
+										</div>
+										<div class="form-hero__activities">
+											<button type="button" class="form-hero__return">
+                                    <svg>
+                                       <use xlink:href="@img/sprite.svg#double-arrow">
+                                    </svg>
+                                    <span>Предыдущий вопрос</span>
+                                 </button>
+											<button type="button" class="cta cta--gr">
+												<span>Следующий вопрос</span>
+											</button>
+											<input type="submit" value="Оставить заявку" hidden="true" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+            <section class="page__about about">
+               <div class="about__container container">
+                  <h2 class="about__title">Мы покупаем технику <br> <span class="_accent">в любом</span> состоянии, <span class="_accent">любой</span> комплекции, <span class="_accent">любых</span> производителей</h2>
+                  <div class="about__body">
+                     <article class="about__card card-about">
+                        <a href="javascript:void(0);" title="Узнать стоимость услуги" class="card-about__image">
+                           <img src="@temp/about/01.jpg" alt="Новое устройство">
+                        </a>
+                        <h3 class="card-about__title">Новые</h3>
+                        <p class="card-about__descr">Заплатим до <span class="_accent">90%</span> от максимальной рыночной стоимости сразу на руки</p>
+                        <a href="javascript:void(0);" title="Узнать стоимость услуги" class="cta cta--gr card-about__link">
+                           <span>Узнать цену</span>
+                        </a>
+                     </article>
+                     <article class="about__card card-about">
+                        <a href="javascript:void(0);" title="Узнать стоимость услуги" class="card-about__image">
+                           <img src="@temp/about/02.jpg" alt="Б/У устройство">
+                        </a>
+                        <h3 class="card-about__title">Б/У</h3>
+                        <p class="card-about__descr">Выкупаем <span class="_accent">подержанную</span> рабочую технику на основе её диагностики</p>
+                        <a href="javascript:void(0);" title="Узнать стоимость услуги" class="cta cta--gr card-about__link">
+                           <span>Узнать цену</span>
+                        </a>
+                     </article>
+                     <article class="about__card card-about">
+                        <a href="javascript:void(0);" title="Узнать стоимость услуги" class="card-about__image">
+                           <img src="@temp/about/03.jpg" alt="Нерабочее устройство">
+                        </a>
+                        <h3 class="card-about__title">Нерабочие</h3>
+                        <p class="card-about__descr">Выкупаем сломанную или разобранную технику <span class="_accent">на запчасти или утилизацию</span></p>
+                        <a href="javascript:void(0);" title="Узнать стоимость услуги" class="cta cta--gr card-about__link">
+                           <span>Узнать цену</span>
+                        </a>
+                     </article>
+                  </div>
+               </div>
+            </section>
+            <section class="page__guarantee guarantee">
+               <div class="guarantee__container container" style="background-image: url('@temp/guarantee/bg.jpg');">
+                  <div class="guarantee__body">
+                     <h2 class="guarantee__title _accent">Гарантия лучшей цены</h2>
+                     <p class="guarantee__descr">Мы гарантируем, если за ваш ноутбук предложат больше - мы <span class="_accent">вернём ваш ноутбук</span> в течение 1 дня</p>
+                     <form action="" class="guarantee__form form-callback">
+                        <input type="tel" name="Номер телефона" placeholder="номер телефона" autocomplete="off">
+                        <input type="submit" value="Оставить заявку" class="cta">
+                     </form>
+                  </div>
+               </div>
+            </section>
 			</main>
 			@@include("./html/_footer.html",{})
 		</div>

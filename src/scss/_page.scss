@@ -1,0 +1,13 @@
+.page {
+	&__hero {
+	}
+	&__about {
+		margin-top: rem(175);
+	}
+	&__guarantee {
+		margin-top: rem(120);
+		@media (max-width: $mobileNormal) {
+			margin-top: rem(80);
+		}
+	}
+}

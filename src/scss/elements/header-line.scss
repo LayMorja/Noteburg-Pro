@@ -22,21 +22,51 @@
 }
 
 .contacts-list li {
-	@extend %fl-a-ct;
-	border-radius: 50%;
-	background: var(--gr);
+	flex: 0 0 rem(22);
 }
 
 .contacts-list a {
-	border-radius: 50%;
-	background: var(--gr);
-}
-
-.contacts-list a svg {
-	display: block;
+	position: relative;
 	width: rem(22);
 	height: rem(22);
+	@extend %fl-a-ct;
+	border-radius: 50%;
+	border-radius: 50%;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		background-image: var(--gr);
+		transition: all 0.32s ease-in-out;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				opacity: 0;
+			}
+			svg,
+			path,
+			use {
+				fill: var(--clr-accent);
+			}
+		}
+	}
+}
+
+.contacts-list a svg,
+.cotnacts-list a svg path {
+	position: relative;
+	z-index: 2;
+	display: block;
+	max-width: rem(13);
+	max-height: rem(13);
 	object-fit: contain;
+	fill: var(--clr-white);
+	transition: fill 0.32s ease-in-out;
 }
 
 //====================================================================================================
@@ -98,7 +128,7 @@
 			margin-left: rem(10);
 		}
 		padding: rem(8.5) rem(16);
-		transition: transform 0.15s ease;
+		transition: transform 0.15s ease, background-color 0.22s ease-in-out;
 		&:active {
 			transform: translateY(rem(1));
 		}

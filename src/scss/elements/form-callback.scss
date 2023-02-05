@@ -1,0 +1,36 @@
+.form-callback {
+	@extend %fl-r-ct;
+	input:last-child {
+		margin-left: rem(15);
+	}
+	input:not([type='submit']) {
+		height: rem(50);
+		padding: rem(5) rem(24);
+		background-color: var(--clr-white);
+		border-radius: rem(33);
+		font-size: rem(13);
+		line-height: math.div(18, 13);
+		transition: box-shadow 0.32s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 3px 5px rgba(0, 0, 0, 0.3);
+			}
+		}
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+		input:last-child {
+			margin-left: 0;
+			margin-top: rem(15);
+		}
+		input,
+		button {
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

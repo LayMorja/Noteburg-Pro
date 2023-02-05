@@ -9,6 +9,17 @@
 		.header__lower {
 			background: rgba(255, 255, 255, 0.1);
 		}
+		&._header-scroll .header__lower {
+			background: var(--gr);
+			transform: translateY(-100%);
+			opacity: 0;
+			visibility: hidden;
+		}
+		&._header-show._header-scroll .header__lower {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 	&__upper {
 		background-color: var(--clr-white);
@@ -55,6 +66,7 @@
 	&__lower {
 		padding: rem(12) 0;
 		background: var(--gr);
+		transition: all 0.32s ease-in-out;
 		@media (max-width: $tablet) {
 			padding: 0;
 		}

@@ -1,5 +1,57 @@
 .hero {
-   &__container {
-      
-   }
+	@extend %bg-cov;
+	border-radius: 0 0 rem(30) rem(30);
+	margin-bottom: rem(55);
+	@media (max-width: $mobile) {
+		margin-bottom: rem(240);
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-top: rem(152);
+		height: calc(100vh - rem(55));
+		@media (max-width: $tablet) {
+			padding-top: rem(93);
+		}
+		@media (max-width: $mobile) {
+			justify-content: center;
+			height: 100vh;
+		}
+		@media (max-width: $mobileNormal) {
+			padding-top: rem(74);
+		}
+	}
+
+	&__container h1 {
+		max-width: rem(801);
+		@extend %f-48-700;
+		color: var(--clr-white);
+		@media (max-width: $mobile) {
+			font-size: rem(32);
+			margin-bottom: rem(-120);
+		}
+		@media (max-width: $mobileMedium) {
+			font-size: rem(28);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: rem(26);
+		}
+		@media (max-width: $mobileMini) {
+			font-size: rem(22);
+		}
+	}
+
+	&__form {
+		&:last-child {
+			margin-top: max(rem(90), 20vmin);
+		}
+		transform: translateY(rem(55));
+		@media (max-width: $mobile) {
+			&:last-child {
+				margin-top: 0;
+			}
+			transform: translateY(rem(240));
+		}
+	}
 }

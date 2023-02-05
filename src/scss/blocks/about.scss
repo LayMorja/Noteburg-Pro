@@ -1,0 +1,33 @@
+.about {
+	&__container {
+	}
+
+	&__title {
+		max-width: rem(766);
+		@extend %f-38-700;
+		line-height: 1;
+		text-align: center;
+		margin: 0 auto;
+		&:not(:last-child) {
+			margin-bottom: em(60, 38);
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		column-gap: rem(20);
+		row-gap: rem(30);
+	}
+
+	&__card {
+		&:nth-child(3) {
+			@media (max-width: $tablet) {
+				grid-column: span 2;
+			}
+			@media (max-width: $mobileNormal) {
+				grid-column: span 1;
+			}
+		}
+	}
+}
